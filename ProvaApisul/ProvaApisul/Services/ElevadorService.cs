@@ -302,17 +302,17 @@ namespace ProvaApisul.Services
                 }
             }
 
-            decimal ca = (countEleA * 100) / b.Count();
-            decimal cb = (countEleB * 100) / b.Count();
-            decimal cc = (countEleC * 100) / b.Count();
-            decimal cd = (countEleD * 100) / b.Count();
-            decimal ce = (countEleE * 100) / b.Count();
+            decimal ca = (Convert.ToDecimal(countEleA) * 100) / b.Count();
+            decimal cb = (Convert.ToDecimal(countEleB) * 100) / b.Count();
+            decimal cc = (Convert.ToDecimal(countEleC) * 100) / b.Count();
+            decimal cd = (Convert.ToDecimal(countEleD) * 100) / b.Count();
+            decimal ce = (Convert.ToDecimal(countEleE) * 100) / b.Count();
 
-            valida.Append("A: " + (ca).ToString("N") + ", ");
-            valida.Append("B: " + (cb).ToString("N") + ", ");
-            valida.Append("C: " + (cc).ToString("N") + ", ");
-            valida.Append("D: " + (cd).ToString("N") + ", ");
-            valida.Append("E: " + (ce).ToString("N") + ", ");
+            valida.Append("A: " + (ca).ToString("F2") + ", ");
+            valida.Append("B: " + (cb).ToString("F2") + ", ");
+            valida.Append("C: " + (cc).ToString("F2") + ", ");
+            valida.Append("D: " + (cd).ToString("F2") + ", ");
+            valida.Append("E: " + (ce).ToString("F2") + ", ");
             valida.Append("Total de serviçõs: " + b.Count());
 
             var result = valida;
