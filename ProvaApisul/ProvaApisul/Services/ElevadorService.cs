@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Collections.Immutable;
 using System.Diagnostics.Metrics;
+using System.Text;
 
 namespace ProvaApisul.Services
 {
@@ -82,14 +83,14 @@ namespace ProvaApisul.Services
                     result = resultTurn;
                     break;
                 case 5:
-                    result = "";
+                    result = GetPorcentagemElevador(listElevador);
                     break;
             }
 
             return await Task.Run(() => { return result; });
         }
 
-        private string GetSemUso(List<int> b, int[] a)
+        public string GetSemUso(List<int> b, int[] a)
         {
             b.Sort();
             string valida = "Andares que não foram usados: ";
@@ -268,6 +269,53 @@ namespace ProvaApisul.Services
             valida.Add("E", countEleE);
 
             var result = valida.Where(a => a.Value == valida.Select(a => a.Value).Max()).Select(a => a.Key).FirstOrDefault();
+
+            return elevadorMaiorUso + result + ". ";
+        }
+
+        public string GetPorcentagemElevador(List<string> b)
+        {
+            b.Sort();
+            string elevadorMaiorUso = "Porcentagens de uso: ";
+
+            StringBuilder valida = new StringBuilder();
+
+            foreach (var i in b)
+            {
+                switch (i)
+                {
+                    case "A":
+                        countEleA += 1;
+                        break;
+                    case "B":
+                        countEleB += 1;
+                        break;
+                    case "C":
+                        countEleC += 1;
+                        break;
+                    case "D":
+                        countEleD += 1;
+                        break;
+                    case "E":
+                        countEleE += 1;
+                        break;
+                }
+            }
+
+            decimal ca = (countEleA * 100) / b.Count();
+            decimal cb = (countEleB * 100) / b.Count();
+            decimal cc = (countEleC * 100) / b.Count();
+            decimal cd = (countEleD * 100) / b.Count();
+            decimal ce = (countEleE * 100) / b.Count();
+
+            valida.Append("A: " + (ca).ToString("N") + ", ");
+            valida.Append("B: " + (cb).ToString("N") + ", ");
+            valida.Append("C: " + (cc).ToString("N") + ", ");
+            valida.Append("D: " + (cd).ToString("N") + ", ");
+            valida.Append("E: " + (ce).ToString("N") + ", ");
+            valida.Append("Total de serviçõs: " + b.Count());
+
+            var result = valida;
 
             return elevadorMaiorUso + result + ". ";
         }
