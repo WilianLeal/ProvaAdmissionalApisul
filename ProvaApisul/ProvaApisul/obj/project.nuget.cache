@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZZ2wMl+zNT77S0IdoNs7tjN4wZklSKAFMNzvtPNUSsYPOSNlM79zN2jhimn1cNp2T5x/7YpFpV95JF6Bedeb6Q==",
+  "success": true,
+  "projectFilePath": "C:\\inetpub\\wwwroot\\prova\\ProvaApisul\\ProvaApisul\\ProvaApisul.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Wilian Leal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
